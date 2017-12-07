@@ -1,0 +1,13 @@
+总结下，如果是ribbon中实现监控台功能，跟着博文操作就好，如果是在Feign中的话，除了ribbon的几个操作，
+还需要在启动类上加@EnableCircuitBreaker，
+同时在pom文件中加
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+此外在配置文件中加上
+feign:
+    hystrix:
+        enabled: true
+（我是yml文件格式，如果是properties的话是这样feign.hystrix.enabled: true）
+然后请求一次，监控台就会出现数据了
