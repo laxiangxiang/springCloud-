@@ -10,7 +10,7 @@ spring:
 #          username: your username
 #          password: your password
       label: master
-#httpÇëÇóµØÖ·ºÍ×ÊÔ´ÎÄ¼şÓ³ÉäÈçÏÂ:
+#httpï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ô´ï¿½Ä¼ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
 #/{application}/{profile}[/{label}]
 #/{application}-{profile}.yml
 #/{label}/{application}-{profile}.yml
@@ -18,3 +18,9 @@ spring:
 #/{label}/{application}-{profile}.properties
 server:
   port: 8888
+#  æŒ‡å®šæ³¨å†ŒæœåŠ¡ä¸­å¿ƒ
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
